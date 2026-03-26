@@ -96,6 +96,24 @@
             40% {transform: translateY(-12px);}
             60% {transform: translateY(-6px);}
         }
+        /* This keeps all your media inside the frame */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* Optional: adds a nice soft corner like your boxes */
+}
+
+/* Update your media-group to ensure it handles the padding */
+.media-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* This is the secret ingredient! */
+}
 
         @media (max-width: 600px) {
     h1 { font-size: 2.8rem; } /* Keeps the title fitting on small screens */
